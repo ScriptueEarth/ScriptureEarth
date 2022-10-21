@@ -57,6 +57,36 @@ div.linePointer {
 div.linePointer:hover{
     border-bottom:2px solid red;
 }
+
+/* The following css are from Lærke Roager. */
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} 
 </style>
 
 <?php
@@ -237,6 +267,22 @@ $i=0;											// used in 00-DBLanguageCountryName.inc.php include
 
 	<table id='individualLanguage'>
 	<?php
+
+	$read_array = [];
+	$listen_array = [];
+	$view_array = [];
+	$app_array = [];
+	$other_array = [];
+	$all_array = [];
+	$string_temp = '';
+
+	$string_temp = "<table class='individualLanguage'>";
+	array_push($read_array, $string_temp);
+	array_push($listen_array, $string_temp);
+	array_push($view_array, $string_temp);
+	array_push($app_array, $string_temp);
+	array_push($other_array, $string_temp);
+	array_push($all_array, $string_temp);
 
 /*
 	*************************************************************************************************************
